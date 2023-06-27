@@ -79,10 +79,9 @@
             form.addEventListener('submit', function(event) {
                 event.preventDefault(); // Prevent form submission
 
-                // Collect form data
-                const formData = new FormData(form);
+                const formData = new FormData(form); // Collect form data
 
-                // Send form data asynchronously
+                /* Send form data asynchronously */
                 fetch(form.action, {
                     method: 'POST',
                     headers: {
@@ -99,10 +98,9 @@
                 })
                 .then(data => {
                     if (data.success) {
-                        // Clear the form
-                        form.reset();
+                        form.reset(); // Clear the form
 
-                        // Update the table with the new row
+                        /* Update the table with the new row */
                         const tableBody = document.getElementById('countries-table');
                         const newRow = document.createElement('tr');
                         newRow.classList.add('border-t');
