@@ -7,5 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Country extends Model
 {
-    use HasFactory;
+    protected $fillable = ['name', 'iso', 'user_id'];
+    // use HasFactory;
 }
